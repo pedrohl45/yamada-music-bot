@@ -1,22 +1,41 @@
-# Discord Music Bot 🎵
+<div align="center">
+  <img src="https://i.pinimg.com/originals/7a/74/e0/7a74e0d4bc0b3df2a5105273f5a2e5c8.gif" alt="Banner" width="100%">
 
-Um Bot de Música para Discord robusto e pronto para produção, construído com `discord.py` e `yt-dlp`. 
-Possui Comandos Slash modernos (`/`), extração de playlists otimizada, e streaming de áudio confiável sem travar o bot.
+  # YamadaBot
+  
+  *A sua assistente musical definitiva para noites de insônia, playlists enormes e alta performance no Discord.*
 
-## 🚀 Funcionalidades
+  ![Python](https://img.shields.io/badge/PYTHON-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+  ![Discord.py](https://img.shields.io/badge/DISCORD.PY-2.X-5865F2?style=for-the-badge&logo=discord&logoColor=white)
+  ![yt-dlp](https://img.shields.io/badge/YT--DLP-2023+-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
+  ![FFmpeg](https://img.shields.io/badge/FFMPEG-AUDIO-007808?style=for-the-badge&logo=ffmpeg&logoColor=white)
+  <br>
+  ![Status](https://img.shields.io/badge/STATUS-ESTÁVEL-success?style=for-the-badge)
 
-- **Comandos Slash:** Integração nativa com a interface do Discord (`/play`, `/skip`, `/queue`, `/stop`).
-- **Alta Performance:** Utiliza `extract_flat` para carregar playlists do YouTube instantaneamente, sem gargalos.
-- **Concorrência Robusta:** Gerenciamento de eventos com `asyncio` à prova de falhas, garantindo que as músicas toquem sem atropelamentos.
-- **Desconexão Inteligente:** Sai automaticamente do canal de voz para economizar recursos se ficar inativo ou se todos os usuários saírem por mais de 3 minutos.
-- **Arquitetura Limpa:** Design modular Profissional, separando a lógica em Cogs e usando gerenciadores de estado (POO).
+</div>
 
-## 📋 Requisitos
+<hr>
 
-- Python 3.10 ou superior
-- [FFmpeg](https://ffmpeg.org/) instalado na sua máquina/servidor.
+## 🖤 O que é a YamadaBot?
 
-## 🛠️ Instalação e Configuração
+Chega de bots de música que travam, engasgam ou caem do nada no meio da melhor música. A **YamadaBot** é um ecossistema completo para reprodução de áudio construído para gerenciar o som do seu servidor de forma **automatizada, isolada por contexto e altamente responsiva**.
+
+Desenvolvida com foco extremo em performance e qualidade de áudio, ela serve perfeitamente para qualquer grupo de amigos que não aguenta mais perder o ritmo da call por causa de bots mal otimizados.
+
+<br>
+
+## ✨ O que há de novo? (Atualização 1.0)
+
+Nosso código foi desenhado do zero focado em **escalabilidade**, **Código Limpo** (Clean Code) e Padrões de Projeto (Orientação a Objetos):
+
+- **Integração NATIVA (Slash Commands `/`)**: Esqueça o antigo `!`. A bot está totalmente integrada na UI oficial do Discord.
+- **Isolamento de Estado de Alta Fidelidade**: O sistema permite que o bot toque playlists completamente diferentes em 50 servidores ao mesmo tempo sem que uma fila atropele a outra.
+- **Desconexão Inteligente (Smart Disconnect)**: A Yamada monitora o canal. Se ela for deixada sozinha por mais de 3 minutos, ela para tudo, sai de mansinho e limpa a memória para economizar seus recursos.
+- **Extração Flat (Ultra Rápida)**: Carrega playlists do YouTube com 300 vídeos quase instantaneamente usando requisições rasas (bypass de download de metadados de vídeo).
+
+<hr>
+
+## 🛠️ Como Instalar e Rodar na sua Máquina
 
 1. **Clone o repositório:**
    ```bash
@@ -30,27 +49,32 @@ Possui Comandos Slash modernos (`/`), extração de playlists otimizada, e strea
    source venv/bin/activate  # No Windows: venv\Scripts\activate
    ```
 
-3. **Instale as dependências:**
+3. **Instale as dependências essenciais:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Configuração de Segurança:**
+4. **Configuração de Segurança e Chaves:**
    - Renomeie o arquivo `.env.example` para `.env`.
-   - Abra o `.env` e cole o Token de Desenvolvedor do seu Bot do Discord.
+   - Adicione o **Token de Desenvolvedor** do seu bot dentro do `.env`.
 
-## 🏃 Como Rodar
+5. **Inicie a Assistente:**
+   ```bash
+   python main.py
+   ```
 
-Inicie o bot com o comando abaixo. Ele sincronizará os comandos Slash no Discord de forma automática:
-```bash
-python main.py
-```
+<hr>
 
-## 📂 Estrutura do Projeto
+## 💻 Comandos e Interações
 
-- `main.py`: Ponto de entrada do sistema e inicializador de extensões.
-- `cogs/music.py`: O coração do bot. Contém os comandos de reprodução, fila e a tarefa paralela (background task) responsável pelo streaming contínuo.
-- `core/state.py`: Gerenciador de estado global isolado, garantindo que o bot funcione perfeitamente em múltiplos servidores simultaneamente sem misturar as filas.
+| Comando | Função e Descrição |
+| :--- | :--- |
+| `/play` | Toca uma música (busca por nome ou link direto) ou carrega uma Playlist completa. |
+| `/skip` | Interrompe o fluxo de áudio atual e injeta a próxima música da fila. |
+| `/queue` | Retorna um Embed customizado exibindo a fila atual e a música tocando. Possui suporte a paginação. |
+| `/stop` | Limpa completamente a fila, destroi a tarefa de fundo e remove o bot do canal. |
 
-## 📄 Licença
-Licença MIT
+<hr>
+<div align="center">
+Desenvolvido com 🖤 e foco em código limpo.
+</div>
