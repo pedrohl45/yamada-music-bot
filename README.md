@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.pinimg.com/736x/c2/89/9e/c2899e3d3fa96935220541746b3fe73c.jpg" alt="Banner" width="100%">
+  <img src="https://i.pinimg.com/736x/c2/89/9e/c2899e3d3fa96935220541746b3fe73c.jpg" alt="Banner" width="350">
 
   # YamadaBot
   
