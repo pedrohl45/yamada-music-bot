@@ -35,12 +35,18 @@ Nosso código foi desenhado do zero focado em **escalabilidade**, **Código Limp
 
 <hr>
 
+## 🧰 Pré-requisitos
+
+- **Python 3.10+**
+- **FFmpeg** instalado e disponível no `PATH` (`sudo pacman -S ffmpeg`, `sudo apt install ffmpeg` ou `brew install ffmpeg`)
+- Um **bot criado no [Discord Developer Portal](https://discord.com/developers/applications)** e o token dele
+
 ## 🛠️ Como Instalar e Rodar na sua Máquina
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
+   git clone https://github.com/pedrohl45/yamada-music-bot.git
+   cd yamada-music-bot
    ```
 
 2. **Crie o ambiente virtual:**
@@ -73,6 +79,23 @@ Nosso código foi desenhado do zero focado em **escalabilidade**, **Código Limp
 | `/skip` | Interrompe o fluxo de áudio atual e injeta a próxima música da fila. |
 | `/queue` | Retorna um Embed customizado exibindo a fila atual e a música tocando. Possui suporte a paginação. |
 | `/stop` | Limpa completamente a fila, destroi a tarefa de fundo e remove o bot do canal. |
+
+<hr>
+
+## 🗂️ Estrutura
+
+```
+yamada-music-bot/
+ ┣ main.py          # inicialização do bot e carga dos cogs
+ ┣ cogs/music.py    # slash commands (/play, /skip, /queue, /stop) e fila por servidor
+ ┣ core/state.py    # estado isolado de cada servidor
+ ┣ requirements.txt
+ ┗ .env.example     # modelo do arquivo de configuração
+```
+
+## 🌐 Landing page
+
+Conheça o projeto em **[yamada-music-bot-site.vercel.app](https://yamada-music-bot-site.vercel.app)**.
 
 <hr>
 <div align="center">
